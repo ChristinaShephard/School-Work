@@ -1,0 +1,252 @@
+Script started on Wed 01 Oct 2014 05:40:59 PM EDT
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab_[K1_q1.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 01
+   Date: Sep 24, 2014
+   Purpose: This is a program which promts the user for their first name, and       repeats back a greeting using the submitted name. 
+*/
+
+#include <stdio.h>
+
+int main()
+   {
+      char name[30];
+      printf( "What is your first name?\n" );
+      scanf("%s", name);
+      printf( "Hello %s, how are you?\nI hope you feel 100%% today!\n", name);
+
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q1.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+What is your first name?
+Christina
+Hello Christina, how are you?
+I hope you feel 100% today!
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q2.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 1
+   Date: Sep 24, 2014
+   Purpose:
+*/
+
+#include <stdio.h>
+
+int main()
+
+   {
+      int num; //Number entered by the use
+      int quo; //Quotient
+      int rem; //Remainder
+      
+      printf("Please enter a positive integer:\n"); //prompt
+      scanf("%d", &num); //read an integer
+      
+      quo = num / 3;
+      rem = num % 3;
+      
+      printf("The quotient of %d/3 is: %d\nThe remainder of %d/3 is: %d\n", num, quo, num, rem);
+      
+
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q2.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+Please enter a positive integer:
+4
+The quotient of 4/3 is: 1
+The remainder of 4/3 is: 1
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q3.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 1
+   Date: Sep 24, 2014
+   Purpose:
+*/
+
+#include <stdio.h>
+
+int main()
+
+   {
+      printf("cs140, W2014, lecture schedule:\n");
+      printf("+--------------------------------------+\n");
+      printf(" Day\t\tStart time\tEnd Time\n");
+      printf("+--------------------------------------+\n");
+      printf("Monday\t\t5:30 pm\t\t6:50 pm\n");
+      printf("Wednesday\t5:30 pm\t\t6:50 pm\n");
+      printf("+--------------------------------------+\n");
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q3.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+cs140, W2014, lecture schedule:
++--------------------------------------+
+ Day		Start time	End Time
++--------------------------------------+
+Monday		5:30 pm		6:50 pm
+Wednesday	5:30 pm		6:50 pm
++--------------------------------------+
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q4.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 1
+   Date: Sep 24, 2014
+   Purpose:
+*/
+
+#include <stdio.h>
+
+int main()
+
+   {
+   
+      float num;
+      printf("Please enter a number with decimal digits:\n");
+      scanf("%f", &num);
+      printf("The rounded value to 2 decimal digits is: %.2f\n", num);
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q4.c[K[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q4.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+Please enter a number with decimal digits:
+6.34634
+The rounded value to 2 decimal digits is: 6.35
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q5.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 1
+   Date: Sep 24, 2014
+   Purpose:
+*/
+
+#include <stdio.h>
+
+int main()
+
+   {
+      int a;
+      int b;
+      int c;
+      int sum;
+      int avg;
+      
+      printf("Please enter three integers:\n");
+      scanf("%d %d %d", &a, &b, &c);
+      sum = a + b + c;
+      avg = sum / 3;
+      printf("Their sum is: %d\nTheir Average is: %d\n", sum, avg);
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q5.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+Please enter three integers:
+1 2 3
+Their sum is: 6
+Their Average is: 2
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q6.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab 1
+   Date: Sep 24, 2014
+   Purpose:
+*/
+
+#include <stdio.h>
+
+int main()
+
+   {
+
+      int x;
+      int f;
+      int g;
+      float h;
+
+      printf("Please enter a value for integer x:\n");
+      scanf("%d", &x);
+      f = -2*x + 5;
+      g = x*x*x + 2*x - 4;
+      h = (3.0*x + 2.0) / (2*x - 4);
+
+      printf("\tf(%d) = -2(%d) + 5\t\t= %d\n", x, x, f);
+      printf("\tg(%d) = (%d)^3 + 2(%d) - 4\t\t= %d\n", x, x, x, g);
+      printf("\th(%d) = (3(%d)+2) / (2(%d)-4)\t= %.2f\n", x, x, x, h);
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q6.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+Please enter a value for integer x:
+5
+	f(5) = -2(5) + 5		= -5
+	g(5) = (5)^3 + 2(5) - 4		= 131
+	h(5) = (3(5)+2) / (2(5)-4)	= 2.83
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q7.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab
+   Date:
+   Purpose: 
+*/
+#include <stdio.h>
+
+int main()
+   {
+      float temp1;
+      float temp2;
+      float f_temp;
+      float c_temp;
+
+      printf("Please enter a temperature in Celsius:\n");
+      scanf("%f", &temp1);
+      
+      f_temp = temp1 * 1.8 + 32;
+
+      printf("%.0f Celcius = %.0f Fahrenheit\n", temp1, f_temp);
+
+      printf("Please enter a temperature in Fahrenheit:\n");
+      scanf("%f", &temp2);
+
+      c_temp = (temp2 - 32) / 1.8;
+
+      printf("%.0f Fahrenheit = %.0f Celcius\n", temp2, c_temp);
+
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q7.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+Please enter a temperature in Celsius:
+67
+67 Celcius = 153 Fahrenheit
+Please enter a temperature in Fahrenheit:
+153
+153 Fahrenheit = 67 Celcius
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cat lab1_q8.c
+/* Shephard, Christina
+   ID: 103310660
+   Lab
+   Date:
+   Purpose: 
+*/
+#include <stdio.h>
+
+int main()
+   {
+      printf("\'80/100\' looks like \"80%%\" that's about $80.00\n");
+      
+      return 0;
+   }
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m cc lab1_q8.c
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m ./a.out
+'80/100' looks like "80%" that's about $80.00
+[01;32mchristina@christina-linux-laptop[01;34m ~/cs140/lab1 $[00m exit
+exit
+
+Script done on Wed 01 Oct 2014 05:45:07 PM EDT
