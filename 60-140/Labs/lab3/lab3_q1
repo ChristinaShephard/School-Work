@@ -1,0 +1,28 @@
+/* Shephard, Christina
+   ID: 103310660
+   Lab 3
+   Date: 08.10.2014
+   Purpose: A program that prompts the user to enter an integer number between 1 and 10 and validates the input and prints proper messages.
+*/
+
+# include <stdio.h>
+
+int main()
+{
+   int num;
+
+   printf ("Please enter an integer between 1 and 10:\n");
+   scanf ("%d", &num);
+
+   if ((1 <= num) && (num <= 10))
+   {
+      printf ("You have entered a valid entry, Goodbye!\n");
+   }
+   else
+   {
+      printf ("You have entered an invalid entry!!!\n");
+   }
+
+
+   return 0;
+}
